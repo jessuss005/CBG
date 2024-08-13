@@ -1,0 +1,155 @@
+/* styles.css */
+html {
+    scroll-behavior: smooth;
+}
+
+hr{
+    margin-bottom: 100px;
+}
+
+.disableText{
+    color: #a7a3a3; /* Color gris claro */
+    font-style: italic; /* Opcional: estilo cursiva */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #6200ea;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h4 {
+    color: #6200ea;
+    margin-top: 0;
+}
+
+.form-section, .script-section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.btn, .faq-btn {
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover, .faq-btn:hover {
+    background-color: #3700b3;
+}
+
+.notepad-section {
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+}
+
+.floating-faq {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #6200ea;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .container, .notepad-section, .floating-faq {
+        width: calc(100% - 40px);
+        left: 20px;
+        right: 20px;
+    }
+
+    .notepad-section, .floating-faq {
+        position: relative;
+        margin-bottom: 20px;
+        left: auto;
+        right: auto;
+    }
+
+    .container {
+        margin: 20px auto;
+    }
+}

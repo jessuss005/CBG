@@ -1,11 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Script de Call Center</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <img src="logo.png" alt="Logo de la Empresa" class="logo">
+    </header>
     
+    <div class="container">
+        <h1>Referidos Child Safe Kit</h1>
+        
+        <div class="form-section">
+
+            <label for="nombreCallerForm">Nombre del Caller:</label>
+            <input type="text" id="nombreCallerForm" placeholder="Ingrese el nombre del caller">
+
+            <label for="nombreClienteForm">Nombre del Cliente:</label>
+            <input type="text" id="nombreClienteForm" placeholder="Ingrese el nombre del cliente">
+            
+            <label for="sexoClienteForm">Sexo del Cliente:</label>
+            <select id="sexoClienteForm">
+                <option value="el señor">Masculino</option>
+                <option value="la señora">Femenino</option>
+            </select>
+
+            <label for="nombreReferidoForm">Nombre del Referido:</label>
+            <input type="text" id="nombreReferidoForm" placeholder="Ingrese el nombre del referido">
+
+            <label for="sexoReferidoForm">Sexo del Referido:</label>
+            <select id="sexoReferidoForm">
+                <option value="el señor">Masculino</option>
+                <option value="la señora">Femenino</option>
+            </select>
+
+            <label for="horaForm">Horas disponibles:</label>
+            <input type="text" id="horaForm" placeholder="De 2:00 a 5:00 PM, 7:00 o 9:00 PM...">
+
+            <label for="fechaForm">Fecha:</label>
+            <select id="fechaForm">
+                <option value="hoy">Hoy</option>
+                <option value="mañana">Mañana</option>
+            </select>
+
+        </div>
+
+        <div class="script-section">
+            <p>¿Buenas tardes me comunico con <span id="SexoCliente">[Sexo]</span> <span id="nombreCliente">[Cliente]</span>?</p>
+            <p>Un gusto, mi nombre es <span id="nombreCaller">[Caller]</span>. Le estoy hablando en referencia a <span id="SexoReferido">[Sexo]</span> <span id="nombreReferido">[referido]</span>  por parte del Programa de protección infantil Child Safe Kit que trabaja en conjunto con la alerta Amber ¿Le comentó que la íbamos a llamar?</p>
+            <a href="#motivo"><button class="btn" id="respuesta-si">Sí</button></a>
+            <a href="#no"><button class="btn" id="respuesta-no">No</button></a>
+            <!-- Sí -->
+            <p id="motivo">Como le comenté anteriormente <span id="SexoReferido2">[Sexo]</span> <span id="nombreReferido2">[referido]</span> recibió este programa sin costo alguno, y al ver el valor y la importancia del mismo decidió tomarla en cuenta a usted para entregarle la misma información y los mismos artículos que Él/Ella recibió indicándonos que usted también se preocupa por la seguridad de sus hijos.</p>
+            <p>El motivo de mi llamada es porque el día de <span id="fecha">[fecha]</span> estaremos haciendo las entregas de <span id="SexoReferido3">[Sexo]</span> <span id="nombreReferido3">[referido]</span> <span id="hora">[hora]</span> , ¿cuál sería la mejor hora para usted?</p>
+            <p>Ok, perfecto <span id="SexoCliente2">[Sexo]</span> <span id="nombreCliente2">[Cliente]</span> ¿usted es casad<span id="AorO">@</span>, solter<span id="AorO">@</span>, separad<span id="AorO">@</span> o vive en unión libre? Le hago esta pregunta porque al ser casad<span id="AorO">@</span> o vivir en unión libre debe encontrarse con su pareja para que ambos reciban la misma información.</p>
+            <p><span class="disableText">(En caso de tener pareja)</span>¿Estará usted y su pareja a la hora indicada en el hogar? </p>
+            <p><span class="disableText">(Si preguntan donde harán la entrega)</span>Se le entregará de la misma manera en que lo recibió <span id="SexoReferido4">[Sexo]</span> <span id="nombreReferido4">[referido]</span>, es decir, de forma presencial en su vivienda. </p>
+            <p>¿Me podría indicar la dirección donde se le hará su entrega por favor? </p>
+            <p>¿Eso es casa o apartamento? </p>
+            <p>Perfecto, ¿tiene lápiz y papel a la mano? Ya que el sistema me arroja un código que debe tener a la mano para su entrega…</p>
+            <p>El código es W941358. Ese código nos indica que no atenderemos a otras familias para darle prioridad a la suya, por tal motivo es IMPERATIVO que usted se encuentre en casa para recibir su programa… Que tenga buen día. Dios le bendiga. Hasta Luego.</p>
+            <hr>
+            <!-- No -->
+             <h4>NO</h4>
+             <p id="no"><span id="SexoReferido5"></span> <span id="nombreReferido5"></span> le envió unos enlaces informativos vía mensajes, ¿Recibió alguno de estos?</p>
+             <a href="#motivo"><button class="btn" id="respuesta-si">Sí</button></a>
+            <a href="#no2"></a><button class="btn" id="respuesta-no">No</button>
+            <p id="no2">Le comento rápidamente, <span id="SexoReferido6"></span> <span id="nombreReferido6"></span> ya adquirió el programa de protección para niños, este es entregado a los padres que desean realmente proteger a sus hijos en cualquier situación, no tiene costo alguno y está avalado por la federación americana de maestros, esto es un método educativo junto con una aplicación móvil donde usted va a tener todos los datos más importantes de sus niños y en caso de que ocurra ni Dios lo quiera algún extravío, pérdida o secuestro usted pueda realizar la activación de la alerta Amber en el menor tiempo posible y pueda encontrar así más rápido a los niños sin que salgan del estado o del país, ¿Conoce el sistema  de la alerta Amber 🆘?</p>
+            <p id="amber"><span class="disableText">No conoce la alerta</span>Es la alerta que llega comúnmente a su teléfono celular cuando un niño se pierde. Al igual que anuncia huracanes, inundaciones o cuando se roban un vehículo. </p>
+            <p><span class="disableText">Sí conoce la alerta</span>Excelente, entonces nosotros en conjunto con el sistema de la Alerta Amber y la Unión de la policía, buscamos disminuir la cantidad de niños extraviados en el estado donde usted reside, ya que lamentablemente este es uno de los estados donde se extravían niños con más frecuencia.</p>
+            <a href="#motivo"><button class="btn" id="motivoLlamada">Ir al motivo de la llamada</button></a>
+        </div>
+        <div>
+            <h2>Respuestas a Preguntas</h2>
+            <h4 id="programa">¿Qué es el programa?</h4>
+            <p>Este programa se encarga de reducir el perímetro de búsqueda de los niños en caso de que algo les ocurra para que active la alerta Amber inmediatamente desde su dispositivo móvil y no espere de 5 a 6 horas en una comisaría para su activación. Básicamente es para darle más prioridad a su familia, a los niños y funciona no solo con las autoridades sino también con los civiles y autoridades internacionales. </p>
+          
+            <h4 id="entrega">¿Qué me van a entregar? 📦 </h4>
+            <p>Le haremos la entrega de un programa físico y uno digital, el digital es el código de la alerta Amber y el físico es una serie de documentos que hace constar que su familia está protegida por el child safe kit. </p>
+           
+            <h4 id="costo">¿Tiene algún costo? ¿O me van a vender algo? 💵 </h4>
+            <p>NO, esto viene financiado directamente por la federación de maestros y los condados en California. El miembro de la unión te explica todo mucho mejor una vez sea entregado. </p>
+         
+            <h4 id="pareja">¿Por qué los dos tenemos que estar acá? 💏</h4>
+            <p>Las personas que viven en unión libre o están casados deben coincidir al momento de la entrega ya que ambos conviven con los menores y deben salvaguardar su integridad. Sin embargo, si el señor no es el padre de los niños no es necesario que esté en la reunión.</p>
+         
+            <h4 id="casa">¿Por qué tienen que venir a mi casa y no en mi trabajo o en otro lugar? 🏡</h4>
+            <p>Por seguridad de los agentes tenemos que saber dónde están en todo momento, y residencias son las únicas direcciones que acepta el sistema para entregar programas a los padres. </p>
+            
+            <h4 id="tiempo">¿Cuánto se demora esto? ⏰ </h4>
+            <p>Depende de las preguntas que ustedes tengan para el agente, puede ser más o menos de 20 minutos. </p>
+            
+            <h4 id="ninos">¿Los niños tienen que estar acá? 👶🍼 </h4>
+            <p>No, el agente te deja toda la información y te explica cómo usarla, y ustedes se hacen cargo de tomar información cuando tengan el tiempo. </p>
+           
+            <h4>CUANDO TE DICEN QUE YA OBTUVIERON LOS BENEFICIOS SE DEBE PREGUNTAR LO SIGUIENTE: </h4>
+            <h4>¿Hace cuánto recibió el programa? ¿Solo le entregaron el programa o recibió algún otro documento?</h4>
+            <a href="">Ofrecer el testamento gratuito</a>
+        </div>
+    </div>
+
+    <div class="notepad-section">
+        <h2>Notas:</h2>
+        <textarea id="notas" placeholder="Escriba las notas aquí..."></textarea>
+        <a href="#motivo"><button class="btn" id="motivoLlamada">Ir al motivo de la llamada</button></a>
+    </div>
+
+    <div class="floating-faq">
+        <ul>
+            <li><a href="#programa"><button class="faq-btn">¿Qué es el programa?</button></a></li>
+            <li><a href="#entrega"><button class="faq-btn">¿Qué me van a entregar? 📦</button></a></li>
+            <li><a href="#costo"><button class="faq-btn">¿Tiene algún costo? 💵</button></a></li>
+            <li><a href="#pareja"><button class="faq-btn">¿Por qué los dos tenemos que estar acá? 💏</button></a></li>
+            <li><a href="#casa"><button class="faq-btn">¿Por qué tienen que venir a mi casa y no en otro lugar? 🏡</button></a></li>
+            <li><a href="#tiempo"><button class="faq-btn">¿Cuánto se demora esto? ⏰</button></a></li>
+            <li><a href="#ninos"><button class="faq-btn">¿Los niños tienen que estar acá? 👶🍼</button></a></li>
+            <li><a href="#amber"><button class="faq-btn">Alerta Amber ⚠️</button></a></li>
+
+            <!-- Añadir más preguntas frecuentes aquí -->
+        </ul>
+
+        <div id="faq-answers">
+            <p id="programa" class="faq-answer" style="display: none;">Este programa se encarga de reducir el perímetro de búsqueda de los niños...</p>
+            <p id="costo" class="faq-answer" style="display: none;">No, esto viene financiado directamente por la federación de maestros...</p>
+            <!-- Añadir más respuestas aquí -->
+        </div>
+    </div>
+
+    <footer>
+        <p>Desarrollado por Jesús Marín</p>
+    </footer>
+
+<script>
+    let nombreCaller = document.getElementById('nombreCallerForm');
+        let nombreCliente = document.getElementById('nombreClienteForm');
+        let sexoCliente = document.getElementById('sexoClienteForm');
+        let nombreReferido = document.getElementById('nombreReferidoForm');
+        let sexoReferido = document.getElementById('sexoReferidoForm');
+        let hora = document.getElementById('horaForm');
+        let fecha = document.getElementById('fechaForm');
+
+        // Update text in script with user inputs
+        const updateScript = () => {
+            document.getElementById('nombreCaller').innerText = nombreCaller.value || "[Caller]";
+            document.getElementById('nombreCliente').innerText = nombreCliente.value || "[Cliente]";
+            document.getElementById('nombreCliente2').innerText = nombreCliente.value || "[Cliente]";
+            document.getElementById('SexoCliente').innerText = sexoCliente.options[sexoCliente.selectedIndex].value || "[Sexo]";
+            sexoCliente2= document.getElementById('SexoCliente2').innerText = sexoCliente.options[sexoCliente.selectedIndex].value.replace(/\b(el|la)\b\s*/g, '') || "[Sexo]";
+            document.getElementById('nombreReferido').innerText = nombreReferido.value || "[Referido]";
+            document.getElementById('nombreReferido2').innerText = nombreReferido.value || "[Referido]";
+            document.getElementById('nombreReferido3').innerText = nombreReferido.value || "[Referido]";
+            document.getElementById('nombreReferido4').innerText = nombreReferido.value || "[Referido]";
+            document.getElementById('nombreReferido5').innerText = nombreReferido.value || "[Referido]";
+            document.getElementById('nombreReferido6').innerText = nombreReferido.value || "[Referido]";
+            document.getElementById('SexoReferido').innerText = sexoReferido.options[sexoReferido.selectedIndex].value || "[Sexo]";
+            document.getElementById('SexoReferido2').innerText = sexoReferido.options[sexoReferido.selectedIndex].value || "[Sexo]";
+            document.getElementById('SexoReferido3').innerText = sexoReferido.options[sexoReferido.selectedIndex].value || "[Sexo]";
+            document.getElementById('SexoReferido4').innerText = sexoReferido.options[sexoReferido.selectedIndex].value || "[Sexo]";
+            document.getElementById('SexoReferido5').innerText = sexoReferido.options[sexoReferido.selectedIndex].value || "[Sexo]";
+            document.getElementById('SexoReferido6').innerText = sexoReferido.options[sexoReferido.selectedIndex].value || "[Sexo]";
+            document.getElementById('hora').innerText = hora.value || "[Hora]";
+            document.getElementById('fecha').innerText = fecha.value || "[Fecha]";
+            document.querySelectorAll('#AorO').forEach(el => el.innerText = sexoCliente.value === 'la señora' ? 'a' : 'o');
+        };
+
+        // Add event listeners to update script when inputs change
+        document.querySelectorAll('input, select').forEach(input => {
+            input.addEventListener('input', updateScript);
+        });
+
+        // Update script on page load
+        updateScript();
+</script>
 </body>
 </html>
